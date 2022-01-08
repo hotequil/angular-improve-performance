@@ -1,0 +1,29 @@
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    row-gap: var(--size);
+
+    &__title{
+        font-size: 1.75rem;
+        font-weight: 500;
+    }
+
+    &__badge{
+        $badge-size: 400px;
+
+        padding: var(--size);
+        width: $badge-size;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 6rem;
+        height: $badge-size;
+        background-color: var(--primary-opaque);
+        border-radius: var(--size);
+        font-weight: 700;
+    }
+}
