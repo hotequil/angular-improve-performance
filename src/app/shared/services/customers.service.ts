@@ -1,27 +1,23 @@
 import { Injectable } from '@angular/core';
 
-import { Customer } from "../types/customer";
+import { uniqueNamesGenerator, animals } from 'unique-names-generator';
 
-const customers: Customer[] = [
-    {
-        name: "Hawkins",
-        balance: 500
-    },
-    {
-        name: "Arnold",
-        balance: 1500
-    },
-    {
-        name: "Mitchell",
-        balance: 2500
-    }
-];
+import { Customer } from "../types/customer";
 
 @Injectable({
     providedIn: 'root'
 })
 export class CustomersService {
     get(): Promise<Customer[]>{
+        const customers: Customer[] = [];
+
+        for(let index = 0; index <= 4; index++){
+            customers.push({
+                name: uniqueNamesGenerator({ dictionaries: [animals] }),
+                balance: Math.round(Math.random() * 1000)
+            })
+        }
+
         return new Promise(resolve => resolve(customers));
     }
 }
