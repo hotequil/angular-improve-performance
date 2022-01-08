@@ -1,1 +1,5 @@
-<p>home works!</p>
+<section class="home">
+    <h2 class="home__title">Customer balance summed</h2>
+    <span class="home__badge">Pipe: {{ customers | calculateSumOfCustomerBalances }}</span>
+    <span class="home__badge">Function: {{ calculateSumOfCustomerBalances() }}</span>
+</section>
