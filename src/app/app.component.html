@@ -1,9 +1,13 @@
-<header>
-
-</header>
-<main>
-    <router-outlet></router-outlet>
-</main>
-<footer>
-
-</footer>
+<div class="app">
+    <header class="app__header">
+        <h1 class="app__title">Angular Improve Performance</h1>
+        <a class="app__link" routerLink="/customers">Customers</a>
+        <a class="app__link" routerLink="/providers">Providers</a>
+    </header>
+    <main class="app__main">
+        <router-outlet></router-outlet>
+    </main>
+    <footer class="app__footer">
+        <p>By <a rel="noopener noreferrer nofollow" href="https://hotequil.tech">hotequil</a></p>
+    </footer>
+</div>
