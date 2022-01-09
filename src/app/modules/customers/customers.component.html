@@ -1,0 +1,6 @@
+<section class="customers">
+    <h2 class="customers__title">Name and balance customers (click on window to launch an event: {{ count }} clicks)</h2>
+    <ul class="customers__list">
+        <li class="customers__item" *ngFor="let customer of customers">{{ customer.name }} ({{ customer.balance }})</li>
+    </ul>
+</section>

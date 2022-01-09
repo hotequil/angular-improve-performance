@@ -1,0 +1,30 @@
+.customers{
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--size);
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    &__title{
+        font-size: 1.75rem;
+        font-weight: 600;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        row-gap: calc(var(--size) / 2);
+        width: 100%;
+    }
+
+    &__item{
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding: var(--size);
+        border-radius: calc(var(--size) / 4);
+        border: var(--border);
+        background-color: var(--primary-opaque);
+        width: 100%;
+    }
+}

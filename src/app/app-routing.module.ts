@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeModule } from "./core/home/home.module";
-
 const routes: Routes = [
     {
         path: '',
-        loadChildren: () => HomeModule
+        loadChildren: () => import("./core/home/home.module").then(module => module.HomeModule)
+    },
+    {
+        path: 'customers',
+        loadChildren: () => import("./modules/customers/customers.module").then(module => module.CustomersModule)
     }
 ];
 
