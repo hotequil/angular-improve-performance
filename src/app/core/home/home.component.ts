@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit, OnDestroy{
 
     async ngOnInit(): Promise<void>{
         this.customers = await this.customersService.get();
-        this.intervalId = setInterval(() => this.changeDetectorRef.detectChanges(), 1000);
+        this.intervalId = window.setInterval(() => this.changeDetectorRef.detectChanges(), 1000);
     }
 
     @counter("Function")
